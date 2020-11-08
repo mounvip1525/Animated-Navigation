@@ -1,3 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root{
+    --color0:#fff;
+    --color1:#0D232F;
+    --color2:#113B51;
+    --color3:#467087;
+    --color4:#6C8FA2;
+}
 *{
     box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    background:#04121a;
+    font-family:Nunito,sans-serif;
+    letter-spacing: 2px;
+}
+.container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+section{
+    width:100%;
+    height:100vh;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--color0);
+}
+section#home{
+    background-image: url('https://images.unsplash.com/photo-1462556791646-c201b8241a94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1345&q=80');
+    background-size: cover;
+    background-position: center center;
+}
+section#home a{
+    position:absolute;
+    z-index:2;
+    top:1.2rem;
+    left:1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color:var(--color0);
+    border-bottom:1px solid var(--color0);
+}
+section#about{
+    background-color: var(--color1);
+}
+section#skills{
+    background-color: var(--color2);
+}
+section#projects{
+    background-color: var(--color3);
+}
+section#contact{
+    background-color: var(--color4);
 }
