@@ -17,6 +17,24 @@ body{
     font-family:Nunito,sans-serif;
     letter-spacing: 2px;
 }
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+    height:100vh;
+    width:100vw;
+    background:rgba(0,0,0,0.7);
+    transform:translate(-100vw);
+}
+.overlay-slide-in{
+    transition: all 0.4s ease-in-out;
+    transform: translateX(0);
+}
+.overlay-slide-out{
+    transition:all 0.8s ease-in-out;
+    transform:translate(-100vw);
+}
 .menu-bars {
     position: fixed;
     top: 1rem;
@@ -47,15 +65,7 @@ body{
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
   }
-  .overlay{
-    position:fixed;
-    top:0;
-    left:0;
-    z-index: 2;
-    height:100vh;
-    width:100vw;
-    background:rgba(0,0,0,0.7);
-}
+  
 nav,nav ul{
     height:100vh;
     margin:0;
@@ -75,6 +85,54 @@ nav li:nth-of-type(4){
 }
 nav li:nth-of-type(5){
     background-color: var(--color4);
+}
+/* launch animation with delay 0.2,0.4,0.6,0.8,1sec */
+.slide-in-1{
+    animation:slide-in 0.4s linear 0.2s both;
+}
+.slide-in-2{
+    animation:slide-in 0.4s linear 0.4s both;
+}
+.slide-in-3{
+    animation:slide-in 0.4s linear 0.6s both;
+}
+.slide-in-4{
+    animation:slide-in 0.4s linear 0.8s both;
+}
+.slide-in-5{
+    animation:slide-in 0.4s linear 1s both;
+}
+@keyframes slide-in{
+     from{
+         transform: translateX(-100%);
+     }
+     to{
+         transform:translateX(0);
+     }
+}
+/* slide out animation with delays 0.5,0.4,0.3.... */
+.slide-out-1{
+    animation:slide-out 0.4s linear 0.5s both;
+}
+.slide-out-2{
+    animation:slide-out 0.4s linear 0.4s both;
+}
+.slide-out-3{
+    animation:slide-out 0.4s linear 0.3s both;
+}
+.slide-out-4{
+    animation:slide-out 0.4s linear 0.2s both;
+}
+.slide-out-5{
+    animation:slide-out 0.4s linear 0.1s both;
+}
+@keyframes slide-out{
+     from{
+         transform: translateX(0);
+     }
+     to{
+         transform:translateX(100%);
+     }
 }
 nav ul{
     display:flex;
