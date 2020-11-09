@@ -21,15 +21,14 @@ function toggleNav(){
     if(overlay.classList.contains('active-menuBar')){
         overlay.classList.replace('overlay-slide-out','overlay-slide-in');
          navAnimation('out','in');
-    }
-    else{
+    }else{
         overlay.classList.replace('overlay-slide-in','overlay-slide-out');
         navAnimation('in','out');
     }
 }
 menuBars.addEventListener('click',toggleNav);
 navItems.forEach(item=>{
-    itemm.addEventListener('click',toggleNav);
+    item.addEventListener('click',toggleNav);
 });
 
 
