@@ -10,9 +10,9 @@ const navItems=[nav1,nav2,nav3,nav4,nav5];
 
 //Control Navigation Animation
 function navAnimation(flowdirection1,flowdirection2){
-    navItems.forEach(item,index){
-        item.classList.replace(`slide-${flowdirection1}-${index+1}`,`slide-${flowdirection2}-${index+1}`)
-    }
+    navItems.forEach((item,index)=>{
+        item.classList.replace(`slide-${flowdirection1}-${index+1}`,`slide-${flowdirection2}-${index+1}`);
+    });
 }
 
 function toggleNav(){
@@ -20,11 +20,11 @@ function toggleNav(){
     overlay.classList.toggle('active-menuBar');
     if(overlay.classList.contains('active-menuBar')){
         overlay.classList.replace('overlay-slide-out','overlay-slide-in');
-         navAnimation('in','out');
+         navAnimation('out','in');
     }
     else{
         overlay.classList.replace('overlay-slide-in','overlay-slide-out');
-        navAnimation('out','in');
+        navAnimation('in','out');
     }
 }
 menuBars.addEventListener('click',toggleNav);

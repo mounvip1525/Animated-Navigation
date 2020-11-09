@@ -131,7 +131,7 @@ nav li:nth-of-type(5){
          transform: translateX(0);
      }
      to{
-         transform:translateX(100%);
+         transform:translateX(-100%);
      }
 }
 nav ul{
